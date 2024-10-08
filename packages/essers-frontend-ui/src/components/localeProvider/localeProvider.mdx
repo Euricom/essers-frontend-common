@@ -1,0 +1,23 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs';
+import * as Stories from './localeProvider.stories';
+
+<Meta of={Stories} />
+
+# LocaleProvider
+
+Wrapper component to provide locale info to its children. <br />
+Used to provide localization to all components.
+
+```jsx
+import { LocaleProvider } from '@essers/frontend-ui';
+
+export App = () => (
+  <LocaleProvider locale="nl">
+    <Router />
+  </LocaleProvider>
+);
+```
+
+## Properties
+
+<ArgTypes />

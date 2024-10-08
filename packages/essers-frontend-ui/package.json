@@ -1,0 +1,53 @@
+{
+  "name": "@essers/frontend-ui",
+  "version": "1.0.0",
+  "description": "This package contains the shared React components for Essers Design System",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json && vite build && npm run build:copy",
+    "build:copy": "node ../../scripts/copyFiles.js",
+    "lint:types": "tsc --noEmit",
+    "test": "vitest",
+    "test:ci": "vitest --run",
+    "test-coverage": "vitest --coverage",
+    "cleanup": "rimraf dist .turbo"
+  },
+  "keywords": [
+    "react",
+    "essers",
+    "components"
+  ],
+  "author": "Essers - Design System Team",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1",
+    "@types/react": "^18.2.21",
+    "@vitejs/plugin-react": "^4.1.0",
+    "happy-dom": "^12.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.9",
+    "vite-plugin-dts": "^3.6.0",
+    "vite-tsconfig-paths": "^4.2.1",
+    "vitest": "^0.34.6"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "lucide-react": "^0.311.0",
+    "sort-on": "^6.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://nexusrepo.essers.com/repository/npmjs/",
+    "directory": "dist",
+    "linkDirectory": false
+  },
+  "sideEffects": false
+}

@@ -1,0 +1,45 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs';
+import * as ButtonStories from './button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+```jsx
+import { Button } from '@essers/frontend-ui';
+
+export MyComponent = () => (
+  <Button variant="outline" size="lg">Click Me</Button>
+  <Button loading>Click Me</Button>
+);
+```
+
+## Properties
+
+<ArgTypes of={ButtonStories} />
+
+## Usage
+
+<Canvas of={ButtonStories.Usage} />
+
+## Icons
+
+<Canvas of={ButtonStories.WithIcons} />
+
+## Icons
+
+<Canvas of={ButtonStories.Sizes} />
+
+## Icons
+
+<Canvas of={ButtonStories.Block} />
+
+
+## Loading
+
+<Canvas of={ButtonStories.Loading} />
+
+
+## Custom Chield
+
+<Canvas of={ButtonStories.CustomChild} />
