@@ -1,0 +1,26 @@
+{
+  "name": "@essers/frontend-tailwind",
+  "version": "1.0.0",
+  "main": "./index.js",
+  "scripts": {
+    "build": "copyfiles * ./src/*.js dist -e scripts -e scripts -e tailwind.config.js -f",
+    "tailwind-viewer": "tailwind-config-viewer -o"
+  },
+  "keywords": [
+    "react",
+    "essers",
+    "tailwind"
+  ],
+  "author": "Essers - Design System Team",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "tailwind-config-viewer": "^2.0.4",
+    "tailwindcss": "^3.4.13"
+  },
+  "publishConfig": {
+    "registry": "https://nexusrepo.essers.com/repository/npmjs/",
+    "directory": "dist",
+    "linkDirectory": false
+  }
+}
