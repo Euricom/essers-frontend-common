@@ -72,8 +72,8 @@ pnpm build             # all packages
 pnpm cleanup           # remove all build artifacts
 
 # format (prettier) all packages (js, css, json, md, mdx)
-pnpm format
-pnpm format:check      # check only
+pnpm format            # check only
+pnpm format:fix
 
 # lint all packages
 pnpm lint

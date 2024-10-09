@@ -10,7 +10,7 @@
     "check": "pnpm biome check ./ --write",
     "format": "pnpm biome format ./",
     "format:fix": "pnpm biome format ./ --write",
-    "release": "npm run build && npx changeset publish",
+    "release": "pnpm build && npx changeset publish",
     "storybook": "storybook dev -p 6007",
     "storybook:build": "storybook build",
     "cleanup": "turbo cleanup && rimraf storybook-static",
