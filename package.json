@@ -13,7 +13,8 @@
     "release": "npm run build && npx changeset publish",
     "storybook": "storybook dev -p 6007",
     "storybook:build": "storybook build",
-    "cleanup": "turbo cleanup && rimraf storybook-static"
+    "cleanup": "turbo cleanup && rimraf storybook-static",
+    "tailwind": "pnpm -F @essers/frontend-tailwind tailwind"
   },
   "keywords": [],
   "author": "Essers - Design System Team",
@@ -22,6 +23,7 @@
     "@biomejs/biome": "^1.9.3",
     "@changesets/cli": "^2.26.2",
     "@commitlint/cli": "^14.1.0",
+    "@essers/frontend-tailwind": "workspace:*",
     "@essers/frontend-ui": "workspace:*",
     "@storybook/addon-actions": "^8.3.5",
     "@storybook/addon-docs": "^8.3.5",

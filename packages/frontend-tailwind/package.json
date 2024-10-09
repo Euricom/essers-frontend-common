@@ -4,7 +4,7 @@
   "main": "./index.js",
   "scripts": {
     "build": "copyfiles * ./src/*.js dist -e scripts -e scripts -e tailwind.config.js -f",
-    "tailwind-viewer": "tailwind-config-viewer -o"
+    "tailwind": "tailwind-config-viewer -o"
   },
   "keywords": [
     "react",
@@ -22,5 +22,8 @@
     "registry": "https://nexusrepo.essers.com/repository/npmjs/",
     "directory": "dist",
     "linkDirectory": false
+  },
+  "dependencies": {
+    "hex-to-hsl": "^1.0.2"
   }
 }

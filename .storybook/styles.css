@@ -2,3 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+// Sample custom component
+@layer components {
+  .header-text {
+    @apply text-2xl font-bold;
+  }
+}
+*/

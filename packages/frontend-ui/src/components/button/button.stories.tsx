@@ -1,10 +1,10 @@
-import type { Meta } from "@storybook/react";
-import Button from "./button";
-import { ArrowRight, Star } from "lucide-react";
-import { action } from "@storybook/addon-actions";
+import type { Meta } from '@storybook/react';
+import Button from './button';
+import { ArrowRight, Star } from 'lucide-react';
+import { action } from '@storybook/addon-actions';
 
 const meta: Meta<typeof Button> = {
-  title: "components/Button",
+  title: 'components/Button',
   component: Button,
 };
 
@@ -12,24 +12,24 @@ export default meta;
 
 export const Usage = () => (
   <div className="space-y-3">
-    <h3 className="text-lg">Button variants</h3>
+    <h3 className="heading3">Button variants</h3>
     <div className="space-x-3">
-      <Button variant="default" onClick={action("onClick")}>
+      <Button variant="default" onClick={action('onClick')}>
         Default
       </Button>
-      <Button variant="secondary" onClick={action("onClick")}>
+      <Button variant="secondary" onClick={action('onClick')}>
         Secondary
       </Button>
-      <Button variant="destructive" onClick={action("onClick")}>
-        Secondary
+      <Button variant="destructive" onClick={action('onClick')}>
+        Destructive
       </Button>
-      <Button variant="ghost" onClick={action("onClick")}>
+      <Button variant="ghost" onClick={action('onClick')}>
         Ghost
       </Button>
-      <Button variant="link" onClick={action("onClick")}>
+      <Button variant="link" onClick={action('onClick')}>
         Link
       </Button>
-      <Button variant="outline" onClick={action("onClick")}>
+      <Button variant="outline" onClick={action('onClick')}>
         Outline
       </Button>
     </div>
@@ -41,7 +41,7 @@ export const Usage = () => (
         Secondary
       </Button>
       <Button variant="destructive" disabled>
-        Secondary
+        Destructive
       </Button>
       <Button variant="ghost" disabled>
         Ghost
@@ -61,37 +61,27 @@ Usage.parameters = {
 
 export const WithIcons = () => (
   <div className="space-y-3">
-    <h3>Default</h3>
+    <h3 className="heading3">Default</h3>
     <div>
       <div className="space-x-3">
-        <Button startContent={<Star size="14" role="presentation" />}>
-          Before
-        </Button>
-        <Button endContent={<ArrowRight size="14" role="presentation" />}>
-          After
-        </Button>
+        <Button startContent={<Star size="14" role="presentation" />}>Before</Button>
+        <Button endContent={<ArrowRight size="14" role="presentation" />}>After</Button>
         <Button
           startContent={<Star size="14" role="presentation" />}
           endContent={<ArrowRight size="14" role="presentation" />}
         >
           Both
         </Button>
-        <Button
-          size="icon"
-          startContent={<Star size="14" role="presentation" />}
-        />
+        <Button size="icon" startContent={<Star size="14" role="presentation" />} />
       </div>
     </div>
-    <h3>Disabled</h3>
+    <h3 className="heading3">Disabled</h3>
     <div>
       <div className="space-x-3">
         <Button disabled startContent={<Star size="14" role="presentation" />}>
           Before
         </Button>
-        <Button
-          disabled
-          endContent={<ArrowRight size="14" role="presentation" />}
-        >
+        <Button disabled endContent={<ArrowRight size="14" role="presentation" />}>
           After
         </Button>
         <Button
@@ -101,11 +91,7 @@ export const WithIcons = () => (
         >
           Both
         </Button>
-        <Button
-          disabled
-          size="icon"
-          startContent={<Star size="14" role="presentation" />}
-        />
+        <Button disabled size="icon" startContent={<Star size="14" role="presentation" />} />
       </div>
     </div>
   </div>
@@ -134,7 +120,7 @@ export const Loading = () => (
 
 export const CustomChild = () => (
   <div>
-    <h3>The element is rendered as `a` tag</h3>
+    <p>The element is rendered as `a` tag</p>
     <Button asChild className="m-2">
       {/* biome-ignore lint/a11y/useValidAnchor: <demo> */}
       <a href="#" className="underline">

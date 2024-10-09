@@ -1,23 +1,23 @@
-import type { StorybookConfig } from "@storybook/react-vite";
+import type { StorybookConfig } from '@storybook/react-vite';
 
 //
 // Setup Storybook
 //
 const config: StorybookConfig = {
   stories: [
-    "../*.mdx",
-    "../packages/essers-frontend-ui/**/*.mdx",
-    "../packages/essers-frontend-ui/src/**/*.stories.tsx",
+    '../*.mdx',
+    '../packages/frontend-ui/**/*.mdx',
+    '../packages/frontend-ui/src/**/*.stories.tsx',
   ],
-  staticDirs: ["./public"],
+  staticDirs: ['./public'],
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
-    "@storybook/addon-storysource",
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+    '@storybook/addon-storysource',
   ],
   framework: {
-    name: "@storybook/react-vite",
+    name: '@storybook/react-vite',
     options: {},
   },
   // async viteFinal(config, options) {

@@ -24,9 +24,12 @@ importers:
       '@commitlint/cli':
         specifier: ^14.1.0
         version: 14.1.0
+      '@essers/frontend-tailwind':
+        specifier: workspace:*
+        version: link:packages/frontend-tailwind
       '@essers/frontend-ui':
         specifier: workspace:*
-        version: link:packages/essers-frontend-ui
+        version: link:packages/frontend-ui
       '@storybook/addon-actions':
         specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
@@ -100,7 +103,11 @@ importers:
         specifier: ^4.2.0
         version: 4.5.5(@types/node@22.7.5)
 
-  packages/essers-frontend-tailwind:
+  packages/frontend-tailwind:
+    dependencies:
+      hex-to-hsl:
+        specifier: ^1.0.2
+        version: 1.0.2
     devDependencies:
       copyfiles:
         specifier: ^2.4.1
@@ -113,7 +120,7 @@ importers:
         version: 3.4.13(ts-node@10.9.2(@types/node@22.7.5)(typescript@5.6.2))
     publishDirectory: dist
 
-  packages/essers-frontend-ui:
+  packages/frontend-ui:
     dependencies:
       '@radix-ui/react-slot':
         specifier: ^1.0.2
@@ -2166,6 +2173,12 @@ packages:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
 
+  hex-to-hsl@1.0.2:
+    resolution: {integrity: sha512-7E2WDAXDNb51Ezc+/MyXOt/NbKgk4LPtEHpUBU0McJVF1seFxUhiOQyf9Sv/5NwTQntsEqzevCsv/Y6chOFLvg==}
+
+  hex-to-rgb@1.0.1:
+    resolution: {integrity: sha512-2GsESdjpJIrRL8I7iPOp0r0wczJBk++Q/zFrviNaTRPWMIgk5bPqDmKPUvRHN0SZrYT9N1e+xZU1niYJ6QxzMg==}
+
   hosted-git-info@2.8.9:
     resolution: {integrity: sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==}
 
@@ -3081,6 +3094,9 @@ packages:
   reusify@1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
+
+  rgb-to-hsl@0.0.2:
+    resolution: {integrity: sha512-92EhT0XUmmC1APQj5NKl3LoNPtZsDBzivTjZAikFuADreIQgqLnJgnnP5gY/mf52UqglAwVDAD/0arY9N35KFg==}
 
   rimraf@6.0.1:
     resolution: {integrity: sha512-9dkvaxAsk/xNXSJzMgFqqMCuFgt2+KsOFek3TMLfo8NCPfWpBmqwyNn5Y+NX56QUYfCtsyhF3ayiboEoUmJk/A==}
@@ -6129,6 +6145,13 @@ snapshots:
 
   he@1.2.0: {}
 
+  hex-to-hsl@1.0.2:
+    dependencies:
+      hex-to-rgb: 1.0.1
+      rgb-to-hsl: 0.0.2
+
+  hex-to-rgb@1.0.1: {}
+
   hosted-git-info@2.8.9: {}
 
   hosted-git-info@4.1.0:
@@ -7010,6 +7033,8 @@ snapshots:
       supports-preserve-symlinks-flag: 1.0.0
 
   reusify@1.0.4: {}
+
+  rgb-to-hsl@0.0.2: {}
 
   rimraf@6.0.1:
     dependencies:
