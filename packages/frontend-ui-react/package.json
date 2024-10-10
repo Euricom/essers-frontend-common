@@ -22,11 +22,11 @@
   "author": "Essers - Design System Team",
   "license": "UNLICENSED",
   "devDependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
     "@types/react": "^18.2.21",
     "@vitejs/plugin-react": "^4.1.0",
-    "@radix-ui/react-slot": "^1.0.2",
     "happy-dom": "^12.2.1",
     "lucide-react": "^0.311.0",
     "react": "^18.2.0",
@@ -38,10 +38,11 @@
     "vitest": "^0.34.6"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "lucide-react": "^0.446.0"
+    "lucide-react": "^0.446.0",
+    "react": "^18.2.0"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.2",
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0"
