@@ -12,10 +12,12 @@ const translation = {
   en: {
     previous: 'Previous',
     next: 'Next',
+    more: 'More Pages',
   },
   nl: {
     previous: 'Vorige',
     next: 'Volgende',
+    more: 'Meer paginas',
   },
 } as Record<string, Record<string, string>>;
 
@@ -43,6 +45,7 @@ PaginationItem.displayName = 'PaginationItem';
 
 const PaginationLink = ({ className, isActive, size = 'icon', ...props }: PaginationLinkProps) => (
   <a
+    role="button"
     aria-current={isActive ? 'page' : undefined}
     className={cn(
       buttonVariants({
@@ -69,7 +72,7 @@ const PaginationPrevious = ({
   };
   return (
     <PaginationLink
-      aria-label="Go to previous page"
+      aria-label={t('previous')}
       size="default"
       className={cn('gap-1 pl-2.5', className, disabled && 'opacity-50 ')}
       onClick={handleClick}
@@ -95,7 +98,7 @@ const PaginationNext = ({
   };
   return (
     <PaginationLink
-      aria-label="Go to next page"
+      aria-label={t('next')}
       size="default"
       className={cn('gap-1 pr-2.5', className, disabled && 'opacity-50')}
       onClick={handleClick}
@@ -108,16 +111,19 @@ const PaginationNext = ({
 };
 PaginationNext.displayName = 'PaginationNext';
 
-const PaginationEllipsis = ({ className, ...props }: React.ComponentProps<'span'>) => (
-  <span
-    aria-hidden
-    className={cn('flex h-9 w-9 items-center justify-center', className)}
-    {...props}
-  >
-    <MoreHorizontal className="h-4 w-4" />
-    <span className="sr-only">More pages</span>
-  </span>
-);
+const PaginationEllipsis = ({ className, ...props }: React.ComponentProps<'span'>) => {
+  const { t } = useTranslation(translation);
+  return (
+    <span
+      aria-hidden
+      className={cn('flex h-9 w-9 items-center justify-center', className)}
+      {...props}
+    >
+      <MoreHorizontal className="h-4 w-4" />
+      <span className="sr-only">{t('more')}</span>
+    </span>
+  );
+};
 PaginationEllipsis.displayName = 'PaginationEllipsis';
 
 const Pagination = ({
@@ -154,7 +160,8 @@ const Pagination = ({
         {paginationRange?.map((item, index) => {
           if (item === -1) {
             return (
-              <PaginationItem>
+              // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+              <PaginationItem key={index}>
                 <PaginationEllipsis />
               </PaginationItem>
             );
