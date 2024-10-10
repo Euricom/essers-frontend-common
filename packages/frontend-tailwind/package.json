@@ -19,7 +19,7 @@
     "tailwindcss": "^3.4.13"
   },
   "publishConfig": {
-    "registry": "https://nexusrepo.essers.com/repository/npmjs/",
+    "registry": "https://nexusrepo.essers.com/repository/essers-local-npm/",
     "directory": "dist",
     "linkDirectory": false
   },

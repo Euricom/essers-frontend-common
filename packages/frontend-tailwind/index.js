@@ -1,6 +1,6 @@
 const plugin = require('tailwindcss/plugin');
-const colors = require('./colors');
-// const defaultTheme = require("tailwindcss/defaultTheme");
+const essersColors = require('./colors');
+const colors = require('tailwindcss/colors');
 // const variables = require('./variables');
 
 const pluginFn = ({ addComponents, theme }) => {
@@ -20,22 +20,26 @@ module.exports = plugin(pluginFn, {
   theme: {
     // customized colors
     colors: {
-      ...colors,
-      // if you want tailwind color pallets, add them here
-      // ...defaultTheme.colors,
       transparent: 'transparent',
       current: 'currentColor',
       white: '#ffffff',
       black: '#000000',
+      // specify which colors you want to add
+      gray: colors.gray,
+      blue: colors.blue,
+      // or add all tailwind colors
+      // ...colors,
+      ...essersColors,
     },
-    // customized border radius
-    borderRadius: {
-      none: '0px',
-      DEFAULT: 'calc(1rem - 2px)',
-      lg: '1rem',
-      md: 'calc(1rem - 2px)',
-      sm: 'calc(1rem - 4px)',
-      full: '9999px',
-    },
+    extend: {},
+    // sample customized border radius
+    // borderRadius: {
+    //   none: '0px',
+    //   DEFAULT: 'calc(1rem - 2px)',
+    //   lg: '1rem',
+    //   md: 'calc(1rem - 2px)',
+    //   sm: 'calc(1rem - 4px)',
+    //   full: '9999px',
+    // },
   },
 });

@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    // Tailwind (autocomplete)
+    "bradlc.vscode-tailwindcss",
+    // Pretty TS errors (better typescript errors)
+    "yoavbls.pretty-ts-errors",
+    // SVG previewer
+    "jock.svg",
+    // Tailwind and other classname folding
+    "stivo.tailwind-fold",
+    // TODO and other highlights
+    "wayou.vscode-todo-highlight",
+    // Spell checker
+    "streetsidesoftware.code-spell-checker",
+    // Fast formatter & linter
+    "biomejs.biome"
+  ]
+}

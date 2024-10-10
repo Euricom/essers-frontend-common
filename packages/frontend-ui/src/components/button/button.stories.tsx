@@ -1,7 +1,7 @@
-import type { Meta } from '@storybook/react';
-import Button from './button';
-import { ArrowRight, Star } from 'lucide-react';
 import { action } from '@storybook/addon-actions';
+import type { Meta } from '@storybook/react';
+import { ArrowRight, Star } from 'lucide-react';
+import Button from './button';
 
 const meta: Meta<typeof Button> = {
   title: 'components/Button',

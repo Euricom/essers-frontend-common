@@ -38,15 +38,15 @@
   },
   "peerDependencies": {
     "react": "^18.2.0",
-    "@radix-ui/react-slot": "^1.0.2",
-    "lucide-react": "^0.311.0"
+    "lucide-react": "^0.446.0"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0"
   },
   "publishConfig": {
-    "registry": "https://nexusrepo.essers.com/repository/npmjs/",
+    "registry": "https://nexusrepo.essers.com/repository/essers-local-npm",
     "directory": "dist",
     "linkDirectory": false
   },

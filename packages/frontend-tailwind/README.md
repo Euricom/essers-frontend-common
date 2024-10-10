@@ -25,6 +25,13 @@ module.exports = {
 };
 ```
 
+## Link package to your app
+
+```bash
+# from the root of your app folder
+pnpm link ~/git/frontend-common/packages/frontend-tailwind 
+```
+
 ## Contribute
 
 Clone the following repo and follow the contribution guidelines.

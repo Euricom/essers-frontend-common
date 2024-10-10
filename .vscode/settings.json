@@ -9,5 +9,23 @@
     "storysource",
     "tailwindcss",
     "testid"
-  ]
+  ],
+  "files.autoSave": "onFocusChange",
+  "tailwind-fold.autoFold": false,
+  "tailwind-fold.unfoldedTextOpacity": 0.4,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+  "editor.defaultFormatter": "biomejs.biome",
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  }
 }

@@ -8,7 +8,7 @@ This package contains the Essers components for React.
 # install package
 npm install @essers/frontend-ui
 
-# or with pnpm
+# or with pnpm (preferable)
 pnpm install @essers/frontend-ui
 ```
 
@@ -25,6 +25,13 @@ export default function MyComponent() {
         </div>
     )
 } 
+```
+
+## Link package to your app
+
+```bash
+# from the root of your app folder
+pnpm link ~/git/frontend-common/packages/frontend-ui 
 ```
 
 ## Contribute
