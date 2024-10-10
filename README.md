@@ -3,7 +3,7 @@
 ## What is in this mono repo?
 
 Packages
-- @essers/frontend-ui
+- @essers/frontend-ui-react
 - @essers/frontend-tailwind
 
 Features
@@ -14,7 +14,7 @@ Features
 - [x] Formatting and linting with [Biome](https://biomejs.dev/)
 - [x] Basic component unit testing with [Vitest](https://vitest.dev/)
 - [x] setup build, changeset / release / publish
-- [ ] doc pnpm link (to link packages to app)
+- [x] doc pnpm link (to link packages to app)
 - [ ] Custom font
 - [x] Components
   - [x] Button
@@ -31,3 +31,5 @@ Features
   - [ ] versioning
   - [ ] readme.md
   - [x] contributing.md file
+
+

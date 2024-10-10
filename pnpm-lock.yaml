@@ -27,9 +27,9 @@ importers:
       '@essers/frontend-tailwind':
         specifier: workspace:*
         version: link:packages/frontend-tailwind
-      '@essers/frontend-ui':
+      '@essers/frontend-ui-react':
         specifier: workspace:*
-        version: link:packages/frontend-ui
+        version: link:packages/frontend-ui-react
       '@storybook/addon-actions':
         specifier: ^8.3.5
         version: 8.3.5(storybook@8.3.5)
@@ -120,7 +120,7 @@ importers:
         version: 3.4.13(ts-node@10.9.2(@types/node@22.7.5)(typescript@5.6.2))
     publishDirectory: dist
 
-  packages/frontend-ui:
+  packages/frontend-ui-react:
     dependencies:
       '@radix-ui/react-slot':
         specifier: ^1.0.2

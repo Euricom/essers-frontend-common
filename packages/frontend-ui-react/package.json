@@ -1,5 +1,5 @@
 {
-  "name": "@essers/frontend-ui",
+  "name": "@essers/frontend-ui-react",
   "version": "1.1.1",
   "description": "This package contains the shared React components for Essers Design System",
   "main": "./src/index.ts",

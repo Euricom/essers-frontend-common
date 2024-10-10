@@ -1,7 +1,7 @@
+import { LocaleProvider } from '@essers/frontend-ui-react';
+import type { Preview } from '@storybook/react';
 // biome-ignore lint/correctness/noUnusedImports: <explanation>
 import React from 'react';
-import type { Preview } from '@storybook/react';
-import { LocaleProvider } from '@essers/frontend-ui';
 
 import './styles.css';
 

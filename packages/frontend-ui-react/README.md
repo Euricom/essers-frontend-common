@@ -1,4 +1,4 @@
-# @essers/frontend-common
+# @essers/frontend-ui-react
 
 This package contains the Essers components for React.
 
@@ -6,16 +6,16 @@ This package contains the Essers components for React.
 
 ```bash
 # install package
-npm install @essers/frontend-ui
+npm install @essers/frontend-ui-react
 
 # or with pnpm (preferable)
-pnpm install @essers/frontend-ui
+pnpm install @essers/frontend-ui-react
 ```
 
 ## General Use
 
 ```js
-import { Button } from @essers/frontend-ui;
+import { Button } from @essers/frontend-ui-react;
 
 export default function MyComponent() {
 
@@ -31,7 +31,7 @@ export default function MyComponent() {
 
 ```bash
 # from the root of your app folder
-pnpm link ~/git/frontend-common/packages/frontend-ui 
+pnpm link ~/git/frontend-common/packages/frontend-ui-react 
 ```
 
 ## Contribute

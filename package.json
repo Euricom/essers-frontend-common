@@ -24,7 +24,7 @@
     "@changesets/cli": "^2.26.2",
     "@commitlint/cli": "^14.1.0",
     "@essers/frontend-tailwind": "workspace:*",
-    "@essers/frontend-ui": "workspace:*",
+    "@essers/frontend-ui-react": "workspace:*",
     "@storybook/addon-actions": "^8.3.5",
     "@storybook/addon-docs": "^8.3.5",
     "@storybook/addon-essentials": "^8.3.5",
