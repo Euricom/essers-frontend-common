@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.1.1
+
+### Patch Changes
+
+- fix invalid package type, now module
+
 ## 1.1.0
 
 ### Minor Changes
