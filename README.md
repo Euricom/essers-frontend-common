@@ -13,6 +13,8 @@ Features
 - [x] Parallel build via [TurboRepo](https://turbo.build/repo/docs)
 - [x] Formatting and linting with [Biome](https://biomejs.dev/)
 - [x] Basic component unit testing with [Vitest](https://vitest.dev/)
+- [x] setup build, changeset / release / publish
+- [ ] doc pnpm link (to link packages to app)
 - [ ] Custom font
 - [x] Components
   - [x] Button
