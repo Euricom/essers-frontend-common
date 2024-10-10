@@ -19,14 +19,13 @@ const meta: Meta<typeof Pagination> = {
 export default meta;
 
 export const Usage = () => {
-  const [total, setTotal] = useState(10);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
   const handlePageChange = (page: number) => {
     setPage(page);
   };
   return (
     <div>
-      <Pagination total={total} page={page} onPageChange={handlePageChange} />
+      <Pagination totalItems={100} pageSize={5} page={page} onPageChange={handlePageChange} />
     </div>
   );
 };

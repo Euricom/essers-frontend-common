@@ -3,7 +3,21 @@ import * as React from 'react';
 
 import { cn } from '../../utils/cn';
 
-import { type ButtonProps, buttonVariants } from '../button';
+import { buttonVariants } from '../button';
+import { useTranslation } from '../localeProvider/localeContext';
+import type { PaginationLinkProps, PaginationProps } from './type';
+import { usePaginator } from './usePaginator';
+
+const translation = {
+  en: {
+    previous: 'Previous',
+    next: 'Next',
+  },
+  nl: {
+    previous: 'Vorige',
+    next: 'Volgende',
+  },
+} as Record<string, Record<string, string>>;
 
 const PaginationContainer = ({ className, ...props }: React.ComponentProps<'nav'>) => (
   <nav
@@ -27,11 +41,6 @@ const PaginationItem = React.forwardRef<HTMLLIElement, React.ComponentProps<'li'
 );
 PaginationItem.displayName = 'PaginationItem';
 
-type PaginationLinkProps = {
-  isActive?: boolean;
-} & Pick<ButtonProps, 'size'> &
-  React.ComponentProps<'a'>;
-
 const PaginationLink = ({ className, isActive, size = 'icon', ...props }: PaginationLinkProps) => (
   <a
     aria-current={isActive ? 'page' : undefined}
@@ -49,31 +58,54 @@ PaginationLink.displayName = 'PaginationLink';
 
 const PaginationPrevious = ({
   className,
+  disabled,
+  onClick,
   ...props
-}: React.ComponentProps<typeof PaginationLink>) => (
-  <PaginationLink
-    aria-label="Go to previous page"
-    size="default"
-    className={cn('gap-1 pl-2.5', className)}
-    {...props}
-  >
-    <ChevronLeft className="h-4 w-4" />
-    <span>Previous</span>
-  </PaginationLink>
-);
+}: React.ComponentProps<typeof PaginationLink>) => {
+  const { t } = useTranslation(translation);
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (disabled) return;
+    onClick?.(event);
+  };
+  return (
+    <PaginationLink
+      aria-label="Go to previous page"
+      size="default"
+      className={cn('gap-1 pl-2.5', className, disabled && 'opacity-50 ')}
+      onClick={handleClick}
+      {...props}
+    >
+      <ChevronLeft className="h-4 w-4" />
+      <span>{t('previous')}</span>
+    </PaginationLink>
+  );
+};
 PaginationPrevious.displayName = 'PaginationPrevious';
 
-const PaginationNext = ({ className, ...props }: React.ComponentProps<typeof PaginationLink>) => (
-  <PaginationLink
-    aria-label="Go to next page"
-    size="default"
-    className={cn('gap-1 pr-2.5', className)}
-    {...props}
-  >
-    <span>Next</span>
-    <ChevronRight className="h-4 w-4" />
-  </PaginationLink>
-);
+const PaginationNext = ({
+  className,
+  disabled,
+  onClick,
+  ...props
+}: React.ComponentProps<typeof PaginationLink>) => {
+  const { t } = useTranslation(translation);
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (disabled) return;
+    onClick?.(event);
+  };
+  return (
+    <PaginationLink
+      aria-label="Go to next page"
+      size="default"
+      className={cn('gap-1 pr-2.5', className, disabled && 'opacity-50')}
+      onClick={handleClick}
+      {...props}
+    >
+      <span>{t('next')}</span>
+      <ChevronRight className="h-4 w-4" />
+    </PaginationLink>
+  );
+};
 PaginationNext.displayName = 'PaginationNext';
 
 const PaginationEllipsis = ({ className, ...props }: React.ComponentProps<'span'>) => (
@@ -88,30 +120,59 @@ const PaginationEllipsis = ({ className, ...props }: React.ComponentProps<'span'
 );
 PaginationEllipsis.displayName = 'PaginationEllipsis';
 
-type PaginationProps = {
-  className?: string;
-  page: number;
-  total: number;
-  onPageChange?: (page: number) => void;
-};
-const Pagination = ({ className, page, total }: PaginationProps) => {
+const Pagination = ({
+  className,
+  page,
+  pageSize,
+  totalItems,
+  onPageChange,
+  hasPreviousPage,
+  hasNextPage,
+  ...restProps
+}: PaginationProps) => {
+  const numberOfPages = Math.ceil(totalItems / pageSize);
+  // const start = page * pageSize + 1;
+  // const end = (page + 1) * pageSize;
+  hasPreviousPage = hasPreviousPage || page > 0;
+  hasNextPage = hasNextPage || page * pageSize + pageSize < totalItems;
+
+  const paginationRange = usePaginator({
+    currentPage: page,
+    numberOfPages,
+    siblingCount: 1,
+  });
+
   return (
-    <PaginationContainer className={className}>
+    <PaginationContainer className={className} {...restProps}>
       <PaginationContent>
         <PaginationItem>
-          <PaginationPrevious href="#" />
+          <PaginationPrevious
+            onClick={() => onPageChange?.(page - 1)}
+            disabled={!hasPreviousPage}
+          />
         </PaginationItem>
+        {paginationRange?.map((item, index) => {
+          if (item === -1) {
+            return (
+              <PaginationItem>
+                <PaginationEllipsis />
+              </PaginationItem>
+            );
+          }
+          return (
+            // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+            <PaginationItem key={index}>
+              <PaginationLink
+                className={cn(item === page + 1 && 'bg-gray-200 text-white')}
+                onClick={() => onPageChange?.(item - 1)}
+              >
+                {item}
+              </PaginationLink>
+            </PaginationItem>
+          );
+        })}
         <PaginationItem>
-          <PaginationLink href="#">1</PaginationLink>
-        </PaginationItem>
-        <PaginationItem>
-          <PaginationLink href="#">2</PaginationLink>
-        </PaginationItem>
-        <PaginationItem>
-          <PaginationEllipsis />
-        </PaginationItem>
-        <PaginationItem>
-          <PaginationNext href="#" />
+          <PaginationNext onClick={() => onPageChange?.(page + 1)} disabled={!hasNextPage} />
         </PaginationItem>
       </PaginationContent>
     </PaginationContainer>
