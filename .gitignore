@@ -2,42 +2,22 @@
 logs
 *.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
 
 # Node
 node_modules
 dist
-*/dist
-dist_test
-dist-ssr
 build
 *.local
 npm-debug.log
-yarn-error.log
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
-.idea
 .turbo
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-/.vs
 
 # Miscellaneous
-/.angular/cache
-.sass-cache/
-storybook-static
-coverage
+ca.pem
 
-# Angular
-.angular
-.vercel

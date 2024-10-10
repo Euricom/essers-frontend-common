@@ -6,7 +6,7 @@
 # install package
 npm install @essers/frontend-tailwind
 
-# or with pnpm
+# or with pnpm (preferable)
 pnpm install @essers/frontend-tailwind
 ```
 
@@ -27,10 +27,9 @@ module.exports = {
 
 ## Contribute
 
-```bash
-# install dependencies
-pnpm install
+Clone the following repo and follow the contribution guidelines.
 
-# build package
-pnpm run build
+```bash
+git clone https://github.essers.com/H-Essers/frontend-common
 ```
+

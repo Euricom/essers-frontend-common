@@ -1,5 +1,6 @@
 const plugin = require('tailwindcss/plugin');
 const colors = require('./colors');
+// const defaultTheme = require("tailwindcss/defaultTheme");
 // const variables = require('./variables');
 
 const pluginFn = ({ addComponents, theme }) => {
@@ -17,13 +18,17 @@ const pluginFn = ({ addComponents, theme }) => {
 
 module.exports = plugin(pluginFn, {
   theme: {
+    // customized colors
     colors: {
       ...colors,
+      // if you want tailwind color pallets, add them here
+      // ...defaultTheme.colors,
       transparent: 'transparent',
       current: 'currentColor',
       white: '#ffffff',
       black: '#000000',
     },
+    // customized border radius
     borderRadius: {
       none: '0px',
       DEFAULT: 'calc(1rem - 2px)',

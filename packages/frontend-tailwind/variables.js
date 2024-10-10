@@ -1,3 +1,10 @@
+// const hexToHsl = require('hex-to-hsl');
+
+// const toHsl = (hex) => {
+//   const hslArray = hexToHsl(hex);
+//   return `${hslArray[0]} ${hslArray[1]}% ${hslArray[2]}%`;
+// };
+
 module.exports = {
   ':root': {
     '--background': '0 0% 100%',
