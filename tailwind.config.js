@@ -7,7 +7,11 @@ module.exports = {
   safelist: [
     // add safe tailwind classes here
   ],
-  content: ['./packages/frontend-ui-react/src/components/**/*.tsx', './**/*.stories.{tsx,mdx}'],
+  content: [
+    './packages/frontend-tailwind//**/*.mdx',
+    './packages/frontend-ui-react/src/components/**/*.tsx',
+    './**/*.stories.{tsx,mdx}',
+  ],
   theme: {
     extend: {
       // add custom theming for storybook here
