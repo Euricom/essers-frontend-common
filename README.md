@@ -15,21 +15,23 @@ Features
 - [x] Basic component unit testing with [Vitest](https://vitest.dev/)
 - [x] setup build, changeset / release / publish
 - [x] doc pnpm link (to link packages to app)
-- [ ] Custom font
-- [x] Components
-  - [x] Button
-  - [ ] Checkbox
-  - [ ] Input
-  - [ ] Dialog
-  - [ ] DialogProvider
-- [ ] I18n for components
+- [x] Button component
+- [x] Added contributing.md file
+
+- [x] Improve Button component ArgTable
+- [x] Add Dialog component
+- [x] Add Paginator component with localization
+- [x] Add DialogProvider component
+- [x] Add Input component
+- [ ] Include font family in tailwind config
 - [ ] Auto include tailwind/typography, tailwind/animation plugin
-- [ ] custom components
+
+- [] Components
+  - [ ] Checkbox
   - [ ] Date picker
   - [ ] Table
 - [ ] Extra Docs
   - [ ] versioning
   - [ ] readme.md
-  - [x] contributing.md file
 
 
