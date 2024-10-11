@@ -36,7 +36,7 @@
         "noRedundantRoles": "off"
       },
       "correctness": {
-        "noUnusedImports": "warn",
+        "noUnusedImports": "off",
         "noUnusedVariables": "error",
         "useExhaustiveDependencies": "warn"
       },
@@ -45,6 +45,9 @@
         "noNestedTernary": "warn",
         "noSecrets": "error",
         "useSortedClasses": "warn"
+      },
+      "suspicious": {
+        "noExplicitAny": "off"
       }
     }
   },

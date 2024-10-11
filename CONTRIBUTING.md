@@ -38,9 +38,9 @@ This project uses [changeset](https://github.com/changesets/changesets) to publi
 Prior to submitting a pull request please follow the following steps.
 
 1. Review and adhere to the standards defined in the [style guide](./STYLE_GUIDE.md).
-2. Rebase your branch from `main`.
-3. Do your changes
-4. Run `pnpm test:ci`
+2. Create a feature branch from `develop`.
+3. Do your changes.
+4. Run `pnpm test:ci`.
 5. Run `pnpm changeset add` to create a changeset for your changes.
 6. You can run `pnpm changeset add` multiple times to different changes (feature, bugfix, etc).
 7. Commit all changes to your branch. For the commit message, refer to the Git Commit Guidelines below
@@ -57,7 +57,6 @@ If you are addressing multiple issues which are unrelated, consider doing multip
 1. Checkout the PR branch
 2. Run `pnpm changeset version`
 3. Run `pnpm release`
-2. Run `pnpm install`
 4. Commit and push
 5. Complete the PR
 
