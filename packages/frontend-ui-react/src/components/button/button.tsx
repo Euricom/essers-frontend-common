@@ -45,7 +45,7 @@ export interface ButtonProps
    * Display the button full width
    * @default false
    */
-  block?: boolean;
+  fullWidth?: boolean;
 
   /**
    * Allows to set custom class names for the button
@@ -94,7 +94,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       variant,
       size,
       asChild = false,
-      block = false,
+      fullWidth = false,
       children,
       type = 'button',
       startContent,
@@ -110,7 +110,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={cn(
           buttonVariants({ variant, size, className }),
           'flex gap-1 align-middle',
-          block && 'w-full',
+          fullWidth && 'w-full',
         )}
         ref={outerRef}
         type={type}

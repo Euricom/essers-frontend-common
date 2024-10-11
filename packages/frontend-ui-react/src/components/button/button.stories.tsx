@@ -1,11 +1,13 @@
 import { action } from '@storybook/addon-actions';
 import type { Meta } from '@storybook/react';
 import { ArrowRight, Star } from 'lucide-react';
+import argTypes from './argTypes';
 import Button from './button';
 
 const meta: Meta<typeof Button> = {
   title: 'components/Button',
   component: Button,
+  argTypes,
 };
 
 export default meta;
