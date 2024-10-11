@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from 'react';
-import { Dialog } from '../dialog';
+import { ClientOnly } from '../clientOnly';
+import { Dialog } from '../dialog/dialog';
 import { DialogRef } from './dialog-ref';
 import type { DialogContextType, DialogProviderProps } from './types';
 
@@ -31,19 +32,22 @@ const DialogProvider = ({ children }: DialogProviderProps) => {
   };
 
   const DialogTemplate = dialogRef?.templateComponent;
-
   return (
     <DialogContext.Provider value={context}>
       {children}
-      <Dialog open={!!dialogRef} onOpenChange={(open) => handleClose(open)}>
-        {dialogRef && (
-          <DialogTemplate
-            {...dialogRef?.componentOptions}
-            onApply={handleClose}
-            onCancel={() => handleClose(null)}
-          />
+      <ClientOnly>
+        {() => (
+          <Dialog open={!!dialogRef} onOpenChange={(open) => handleClose(open)}>
+            {dialogRef && (
+              <DialogTemplate
+                {...dialogRef?.componentOptions}
+                onApply={handleClose}
+                onCancel={() => handleClose(null)}
+              />
+            )}
+          </Dialog>
         )}
-      </Dialog>
+      </ClientOnly>
     </DialogContext.Provider>
   );
 };
