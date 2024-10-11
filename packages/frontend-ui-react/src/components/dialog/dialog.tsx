@@ -14,6 +14,17 @@ const DialogPortal = DialogPrimitive.Portal;
 
 const DialogClose = DialogPrimitive.Close;
 
+const DialogBody = ({
+  className,
+  children,
+}: {
+  className?: string;
+  children: React.ReactNode;
+}) => {
+  return <div className={cn('r-dialog-body', className)}>{children}</div>;
+};
+DialogBody.displayName = 'DialogBody';
+
 const DialogOverlay = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
@@ -94,6 +105,7 @@ DialogDescription.displayName = DialogPrimitive.Description.displayName;
 export {
   Dialog,
   DialogPortal,
+  DialogBody,
   DialogOverlay,
   DialogClose,
   DialogTrigger,

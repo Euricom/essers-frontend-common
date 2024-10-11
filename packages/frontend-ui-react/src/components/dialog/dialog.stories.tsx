@@ -20,10 +20,10 @@ export default meta;
 
 export const Usage = () => {
   return (
-    <div>
+    <div className="flex justify-center">
       <Dialog>
         <DialogTrigger asChild>
-          <Button variant="outline">Share</Button>
+          <Button>Open Dialog</Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>

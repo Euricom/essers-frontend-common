@@ -1,0 +1,65 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs';
+import * as stories from './dialog-provider.stories';
+
+<Meta of={stories} />
+
+# DialogProvider
+
+A easy way to manage dialog state and their results.
+
+## Sample Usage
+
+```tsx
+const MyApp = () => {
+  return (
+    <DailogProvider>
+      <App />
+    </DailogProvider>
+  );
+};
+
+interface MyDialogProps extends DialogContentProps<string> {
+  testProp: boolean;
+}
+
+const ConfirmationDialog = ({ onApply, onCancel }: MyDialogProps) => {
+  return (
+    <DialogContent>
+      <DialogHeader>
+        <DialogTitle>Are you sure?</DialogTitle>
+      </DialogHeader>
+      <DialogBody>
+        <p>
+          Are you sure do delete your Profile. This action cannot be undone. This will permanently
+          delete your account and remove your data from our servers.
+        </p>
+      </DialogBody>
+      <DialogFooter>
+        <Button onClick={() => onApply('ok')}>Remove</Button>
+        <Button variant="outline" onClick={onCancel}>
+          Cancel
+        </Button>
+      </DialogFooter>
+    </DialogContent>
+  );
+};
+
+const MyPage = () => {
+  const { openDialog } = useDialog();
+
+  const handleConfirmation = async () => {
+    const result = await openDialog(ConfirmationDialog).waitForClose();
+    console.log('result', result);
+  };
+
+  return (
+    <div>
+      <Button onClick={handleConfirmation}>Remove Item</Button>
+    </div>
+  );
+};
+```
+
+## Usage
+
+<Canvas of={stories.Usage} />

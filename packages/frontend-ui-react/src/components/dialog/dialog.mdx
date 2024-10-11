@@ -30,9 +30,9 @@ export MyComponent = () => {
             Anyone who has this link will be able to view this.
           </DialogDescription>
         </DialogHeader>
-        <div className="flex items-center space-x-2">
-          <!-- your content here -->
-        </div>
+        <DialogBody>
+          <!-- the dialog content goes here -->
+        </DialogBody>
         <DialogFooter className="sm:justify-start">
           <DialogClose asChild>
             <Button type="button" variant="secondary">
@@ -48,7 +48,8 @@ export MyComponent = () => {
 
 ## Properties
 
-<ArgTypes of={stories} />
+The Dialog component is a lightweight wrapper around the [Radix UI Dialog](https://www.radix-ui.com/primitives/docs/components/dialog).
+For detailed information about its properties and usage, please refer to the Radix UI documentation.
 
 ## Usage
 
