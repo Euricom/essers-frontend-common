@@ -148,12 +148,12 @@ importers:
       clsx:
         specifier: ^2.0.0
         version: 2.1.1
-      date-fns:
-        specifier: ^3.6.0
-        version: 3.6.0
       react-day-picker:
         specifier: ^8.10.1
         version: 8.10.1(date-fns@3.6.0)(react@18.3.1)
+      tailwind-merge:
+        specifier: ^2.5.3
+        version: 2.5.3
     devDependencies:
       '@testing-library/jest-dom':
         specifier: ^6.5.0
@@ -167,6 +167,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.1.0
         version: 4.3.2(vite@4.5.5(@types/node@22.7.5))
+      date-fns:
+        specifier: ^3.6.0
+        version: 3.6.0
       happy-dom:
         specifier: ^12.2.1
         version: 12.10.3
@@ -3663,6 +3666,9 @@ packages:
     hasBin: true
     peerDependencies:
       tailwindcss: 1 || 2 || 2.0.1-compat || 3
+
+  tailwind-merge@2.5.3:
+    resolution: {integrity: sha512-d9ZolCAIzom1nf/5p4LdD5zvjmgSxY0BGgdSvmXIoMYAiPdAW/dSpP7joCDYFY7r/HkEa2qmPtkgsu0xjQeQtw==}
 
   tailwindcss-animate@1.0.7:
     resolution: {integrity: sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==}
@@ -7902,6 +7908,8 @@ snapshots:
       tailwindcss: 3.4.13(ts-node@10.9.2(@types/node@22.7.5)(typescript@5.6.2))
     transitivePeerDependencies:
       - supports-color
+
+  tailwind-merge@2.5.3: {}
 
   tailwindcss-animate@1.0.7(tailwindcss@3.4.13(ts-node@10.9.2(@types/node@22.7.5)(typescript@4.9.5))):
     dependencies:
