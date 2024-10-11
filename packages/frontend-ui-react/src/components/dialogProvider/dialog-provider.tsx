@@ -35,19 +35,15 @@ const DialogProvider = ({ children }: DialogProviderProps) => {
   return (
     <DialogContext.Provider value={context}>
       {children}
-      <ClientOnly>
-        {() => (
-          <Dialog open={!!dialogRef} onOpenChange={(open) => handleClose(open)}>
-            {dialogRef && (
-              <DialogTemplate
-                {...dialogRef?.componentOptions}
-                onApply={handleClose}
-                onCancel={() => handleClose(null)}
-              />
-            )}
-          </Dialog>
+      <Dialog open={!!dialogRef} onOpenChange={(open: any) => handleClose(open)}>
+        {dialogRef && (
+          <DialogTemplate
+            {...dialogRef?.componentOptions}
+            onApply={handleClose}
+            onCancel={() => handleClose(null)}
+          />
         )}
-      </ClientOnly>
+      </Dialog>
     </DialogContext.Provider>
   );
 };

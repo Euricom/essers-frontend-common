@@ -5,8 +5,12 @@ import { X } from 'lucide-react';
 import * as React from 'react';
 
 import { cn } from '../../utils/cn';
+import { ClientOnly } from '../clientOnly';
 
-const Dialog = DialogPrimitive.Root;
+const Dialog = ({ ...restProps }) => (
+  // Only render the dialog on the client
+  <ClientOnly>{() => <DialogPrimitive.Root {...restProps} />}</ClientOnly>
+);
 
 const DialogTrigger = DialogPrimitive.Trigger;
 
