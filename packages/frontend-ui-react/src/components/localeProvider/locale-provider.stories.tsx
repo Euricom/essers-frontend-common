@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react';
-import { LocaleProvider } from './localeProvider';
+import { LocaleProvider } from './locale-provider';
 
 const meta = {
   title: 'components/LocaleProvider',

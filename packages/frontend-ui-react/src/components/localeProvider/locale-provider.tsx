@@ -1,6 +1,6 @@
 import type React from 'react';
 
-import LocaleContext from './localeContext';
+import LocaleContext from './locale-context';
 
 export interface Props {
   locale: string;

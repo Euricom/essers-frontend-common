@@ -1,1 +1,1 @@
-export * from './localeProvider';
+export * from './locale-provider';

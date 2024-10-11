@@ -4,7 +4,7 @@ import * as React from 'react';
 import { cn } from '../../utils/cn';
 
 import { buttonVariants } from '../button';
-import { useTranslation } from '../localeProvider/localeContext';
+import { useTranslation } from '../localeProvider/locale-context';
 import type { PaginationLinkProps, PaginationProps } from './type';
 import { usePaginator } from './usePaginator';
 
