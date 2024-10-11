@@ -1,10 +1,14 @@
 import type { DialogRef } from './dialog-ref';
 
-export interface DialogContentProps<T> {
+export interface DialogContentProps<T = any> {
   /**
    * The title for the Dialog
    */
-  title: string;
+  title: React.ReactNode;
+  /**
+   * The body for the Dialog
+   */
+  body?: React.ReactNode;
   /**
    * Function that should be called when the DialogContent has a result.
    */
