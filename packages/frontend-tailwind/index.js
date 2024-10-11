@@ -9,10 +9,10 @@ const pluginFn = ({ addComponents, theme }) => {
 
   // add custom components (css classes)
   addComponents({
-    '.heading1': { fontSize: theme('fontSize.2xl'), fontWeight: theme('fontWeight.bold') },
-    '.heading2': { fontSize: theme('fontSize.xl'), fontWeight: theme('fontWeight.bold') },
-    '.heading3': { fontSize: theme('fontSize.lg'), fontWeight: theme('fontWeight.bold') },
-    '.heading4': { fontSize: theme('fontSize.md'), fontWeight: theme('fontWeight.bold') },
+    '.heading-1': { fontSize: theme('fontSize.2xl'), fontWeight: theme('fontWeight.bold') },
+    '.heading-2': { fontSize: theme('fontSize.xl'), fontWeight: theme('fontWeight.bold') },
+    '.heading-3': { fontSize: theme('fontSize.lg'), fontWeight: theme('fontWeight.bold') },
+    '.heading-4': { fontSize: theme('fontSize.md'), fontWeight: theme('fontWeight.bold') },
   });
 };
 
@@ -31,15 +31,45 @@ module.exports = plugin(pluginFn, {
       // ...colors,
       ...essersColors,
     },
-    extend: {},
-    // sample customized border radius
-    // borderRadius: {
-    //   none: '0px',
-    //   DEFAULT: 'calc(1rem - 2px)',
-    //   lg: '1rem',
-    //   md: 'calc(1rem - 2px)',
-    //   sm: 'calc(1rem - 4px)',
-    //   full: '9999px',
-    // },
+    fontFamily: {
+      sans: ['Segoe UI', 'SegoeUI', 'Helvetica Neue', 'Helvetica', ' Arial', 'sans-serif'],
+      serif: ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+      mono: [
+        'ui-monospace',
+        'SFMono-Regular',
+        'Menlo',
+        'Monaco',
+        'Consolas',
+        '"Liberation Mono"',
+        '"Courier New"',
+        'monospace',
+      ],
+    },
+    extend: {
+      // extensions needed for ShadCn components
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+        progress: {
+          '0%': { transform: ' translateX(0) scaleX(0)' },
+          '40%': { transform: 'translateX(0) scaleX(0.4)' },
+          '100%': { transform: 'translateX(100%) scaleX(0.5)' },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        progress: 'progress 1s infinite linear',
+      },
+      transformOrigin: {
+        'left-right': '0% 50%',
+      },
+    },
   },
 });

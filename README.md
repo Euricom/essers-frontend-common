@@ -23,7 +23,9 @@ Features
 - [x] Add Paginator component with localization
 - [x] Add DialogProvider component
 - [x] Add Input component
-- [ ] Include font family in tailwind config
+- [x] Add Label component
+- [x] Include font family in tailwind config
+
 - [ ] Auto include tailwind/typography, tailwind/animation plugin
 
 - [] Components

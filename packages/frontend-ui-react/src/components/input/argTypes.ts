@@ -32,6 +32,30 @@ const argTypes: ArgTypes = {
       },
     },
   },
+  label: {
+    description: 'Sets the label for the input',
+    table: {
+      type: {
+        summary: 'string',
+      },
+    },
+  },
+  error: {
+    description: 'Sets the Input invalid and displays the error message',
+    table: {
+      type: {
+        summary: 'string',
+      },
+    },
+  },
+  description: {
+    description: 'Optional description text for the input',
+    table: {
+      type: {
+        summary: 'string',
+      },
+    },
+  },
   readOnly: {
     description: 'Makes the input read only',
     table: {
@@ -47,7 +71,17 @@ const argTypes: ArgTypes = {
     table: {
       defaultValue: {},
       type: {
-        summary: '(event: Event) => void',
+        // biome-ignore lint/nursery/noSecrets: <explanation>
+        summary: '(event: React.ChangeEvent<HTMLInputElement>) => void',
+      },
+    },
+  },
+  onValueChange: {
+    description: 'Handler that is called when the element value changes.',
+    table: {
+      defaultValue: {},
+      type: {
+        summary: '(value: string) => void',
       },
     },
   },

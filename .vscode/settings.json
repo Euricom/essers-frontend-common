@@ -27,5 +27,6 @@
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "biomejs.biome"
-  }
+  },
+  "tailwindCSS.classAttributes": ["class", "className", "ngClass", "class:list", "classes"]
 }

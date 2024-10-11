@@ -1,0 +1,27 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs';
+import * as stories from './label.stories';
+
+<Meta of={stories} />
+
+# Label
+
+```jsx
+import { Label } from "@/components/ui/label"
+
+const MyComponent = () => {
+  return <Label htmlFor="email">Label</Label>
+}
+```
+
+## Properties
+
+<ArgTypes of={stories} />
+
+The Label component is a lightweight wrapper around the [Shadcn/ui - Pagination](https://ui.shadcn.com/docs/components/label).
+For detailed information about its usage, please refer to the Shadcn/ui documentation.
+
+## Usage
+
+<Canvas of={stories.Usage} />
+
+
