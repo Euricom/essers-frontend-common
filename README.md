@@ -19,18 +19,16 @@ Features
 - [x] Added contributing.md file
 
 - [x] Improve Button component ArgTable
-- [x] Add Dialog component
-- [x] Add Paginator component with localization
-- [x] Add DialogProvider component
-- [x] Add Input component
-- [x] Add Label component
+- [x] Dialog component
+- [x] Paginator component with localization
+- [x] DialogProvider component
+- [x] Input component
+- [x] Label component
 - [x] Include font family in tailwind config
-
-- [ ] Auto include tailwind/typography, tailwind/animation plugin
+- [x] Date picker
 
 - [] Components
   - [ ] Checkbox
-  - [ ] Date picker
   - [ ] Table
 - [ ] Extra Docs
   - [ ] versioning

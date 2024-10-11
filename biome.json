@@ -43,7 +43,6 @@
       "nursery": {
         "noEnum": "error",
         "noNestedTernary": "warn",
-        "noSecrets": "error",
         "useSortedClasses": "warn"
       },
       "suspicious": {

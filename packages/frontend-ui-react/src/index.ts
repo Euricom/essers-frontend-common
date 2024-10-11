@@ -7,6 +7,7 @@ export * from './components/dialogProvider';
 export * from './components/input';
 export * from './components/clientOnly';
 export * from './components/serverOnly';
+export * from './components/popover';
 
 // hooks
 export * from './utils/use-hydrated';
