@@ -25,7 +25,9 @@ Features
 - [x] Input component
 - [x] Label component
 - [x] Include font family in tailwind config
-- [x] Date picker
+- [x] Popover component
+- [ ] Calendar component
+- [ ] Date picker component
 
 - [] Components
   - [ ] Checkbox

@@ -12,7 +12,6 @@ export * from './components/calendar';
 
 // hooks
 export * from './utils/use-hydrated';
-export * from './utils/use-debounce';
 
 // utils
 export { default as Deferred } from './utils/deferred';
