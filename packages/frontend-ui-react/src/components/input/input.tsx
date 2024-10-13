@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { Label } from '@radix-ui/react-label';
+import { SearchIcon } from 'lucide-react';
 import { cn } from '../../utils/cn';
 
 export interface InputFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -48,6 +49,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className="grid w-full gap-1.5">
         {label && <Label htmlFor="email">{label}</Label>}
+        {type === 'search' && (
+          <SearchIcon className="absolute top-2.5 left-2.5 h-4 w-4 text-gray-500" />
+        )}
         <input
           type={type}
           className={cn(
@@ -57,6 +61,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             'focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ',
             'disabled:cursor-not-allowed disabled:opacity-50',
             errorMessage ? 'border-destructive' : 'border-input',
+            type === 'search' && 'pl-8',
             className,
           )}
           onChange={handleChange}
