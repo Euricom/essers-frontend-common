@@ -1,4 +1,4 @@
-import Deferred from './deferred';
+import Deferred from '../../utils/deferred';
 import type { DialogContentProps, DialogProps } from './types';
 
 export class DialogRef<T, K> {
