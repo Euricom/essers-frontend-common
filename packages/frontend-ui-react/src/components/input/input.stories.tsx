@@ -71,6 +71,13 @@ export const Description = () => (
   </div>
 );
 
+export const Search = () => (
+  <div className="space-y-3 p-3">
+    <h3>Search box</h3>
+    <Input type="search" placeholder="search" />
+  </div>
+);
+
 export const Invalid = () => (
   <div className="space-y-3 p-3">
     <h3>Input fields with error message</h3>

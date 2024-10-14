@@ -1,4 +1,5 @@
-import * as React from 'react';
+import type * as React from 'react';
+import { forwardRef, useId } from 'react';
 
 import { Label } from '@radix-ui/react-label';
 import { SearchIcon } from 'lucide-react';
@@ -29,9 +30,17 @@ export interface InputProps extends InputFieldProps {
   onValueChange?: (value: string) => void;
 }
 
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
+const inputStyles = cn(
+  'flex h-10 w-full rounded-md border bg-background px-3 py-2',
+  'text-sm ring-offset-background file:border-0 file:bg-transparent file:font-medium',
+  'file:text-foreground file:text-sm placeholder:text-muted-foreground focus-visible:outline-none',
+  'focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ',
+  'disabled:cursor-not-allowed disabled:opacity-50',
+);
+
+const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, label, error, description, onChange, onValueChange, ...props }, ref) => {
-    const elemId = React.useId();
+    const elemId = useId();
 
     const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
       // console.log('handleChange', event.target.value, onValueChange, onChange);
@@ -46,22 +55,43 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       ...(!!description && { 'aria-describedby': `${elemId}-desc` }),
     };
 
+    if (type === 'search') {
+      return (
+        <div className="relative w-full max-w-sm">
+          <SearchIcon className="absolute top-3 left-2.5 h-4 w-4 text-gray-500" />
+          <input
+            type="search"
+            className={cn(inputStyles, 'pl-8', className)}
+            onChange={handleChange}
+            ref={ref}
+            {...props}
+            {...ariaProps}
+          />
+        </div>
+      );
+    }
+
+    if (!label && !description && !error) {
+      return (
+        <input
+          type={type}
+          className={cn(inputStyles, className)}
+          onChange={handleChange}
+          ref={ref}
+          {...props}
+          {...ariaProps}
+        />
+      );
+    }
+
     return (
       <div className="grid w-full gap-1.5">
         {label && <Label htmlFor="email">{label}</Label>}
-        {type === 'search' && (
-          <SearchIcon className="absolute top-2.5 left-2.5 h-4 w-4 text-gray-500" />
-        )}
         <input
           type={type}
           className={cn(
-            'flex h-10 w-full rounded-md border bg-background px-3 py-2',
-            'text-sm ring-offset-background file:border-0 file:bg-transparent file:font-medium',
-            'file:text-foreground file:text-sm placeholder:text-muted-foreground focus-visible:outline-none',
-            'focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ',
-            'disabled:cursor-not-allowed disabled:opacity-50',
+            inputStyles,
             errorMessage ? 'border-destructive' : 'border-input',
-            type === 'search' && 'pl-8',
             className,
           )}
           onChange={handleChange}
