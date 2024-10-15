@@ -27,7 +27,10 @@ Features
 - [x] Include font family in tailwind config
 - [x] Popover component
 - [ ] Calendar component
+- [ ] Fix calendar styling
 - [ ] Date picker component
+- [ ] Fix Button styling (alignment with icons)
+- [ ] Fix dialog animation in Remix
 
 - [] Components
   - [ ] Checkbox
@@ -35,5 +38,3 @@ Features
 - [ ] Extra Docs
   - [ ] versioning
   - [ ] readme.md
-
-
