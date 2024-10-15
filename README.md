@@ -18,6 +18,7 @@ Features
 - [x] Button component
 - [x] Added contributing.md file
 
+- [x] Added design-tokens info
 - [x] Improve Button component ArgTable
 - [x] Dialog component
 - [x] Paginator component with localization
@@ -31,6 +32,7 @@ Features
 - [ ] Date picker component
 - [ ] Fix Button styling (alignment with icons)
 - [ ] Fix dialog animation in Remix
+- [ ] Fix tailwind import, missing d.ts file
 
 - [] Components
   - [ ] Checkbox
