@@ -7,7 +7,6 @@ export * from './components/dialogProvider';
 export * from './components/confirmDialog';
 export * from './components/input';
 export * from './components/clientOnly';
-export * from './components/serverOnly';
 export * from './components/popover';
 export * from './components/calendar';
 
