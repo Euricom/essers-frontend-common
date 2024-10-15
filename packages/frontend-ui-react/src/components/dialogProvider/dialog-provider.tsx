@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from 'react';
-import { ClientOnly } from '../clientOnly';
 import { Dialog } from '../dialog/dialog';
 import { DialogRef } from './dialog-ref';
 import type { DialogContextType, DialogProviderProps } from './types';
