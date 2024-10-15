@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.2.0
+
+### Minor Changes
+
+- Add Dialog, DialogProvider and Popover component
+- b098570: Added Pagination Component
+- Add label and error prop to Input
+
 ## 1.1.1
 
 ### Patch Changes
