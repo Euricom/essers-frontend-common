@@ -27,12 +27,12 @@ Features
 - [x] Label component
 - [x] Include font family in tailwind config
 - [x] Popover component
+- [x] Fix tailwind import, missing d.ts file
 - [ ] Calendar component
 - [ ] Fix calendar styling
 - [ ] Date picker component
 - [ ] Fix Button styling (alignment with icons)
 - [ ] Fix dialog animation in Remix
-- [ ] Fix tailwind import, missing d.ts file
 
 - [] Components
   - [ ] Checkbox
