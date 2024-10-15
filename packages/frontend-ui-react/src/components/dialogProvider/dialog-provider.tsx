@@ -52,9 +52,16 @@ export const useDialog = () => {
   if (!context) {
     throw new Error('useDialog must be used within a DialogProvider');
   }
+  const openDlg = (
+    templateComponent: typeof context.dialogRef.templateComponent,
+    dialogOptions?: Record<string, any>,
+    componentOptions?: Record<string, any>,
+  ) => {
+    return context.open(templateComponent, dialogOptions, componentOptions).waitForClose();
+  };
   return {
     dialogRef: context.dialogRef,
-    openDialog: context.open,
+    openDialog: openDlg,
   };
 };
 

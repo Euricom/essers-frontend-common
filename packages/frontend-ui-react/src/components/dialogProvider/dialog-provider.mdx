@@ -3,14 +3,15 @@ import * as stories from './dialog-provider.stories';
 
 <Meta of={stories} />
 
-# DialogProvider
+# DialogProvider & useDialog
 
 A easy way to manage dialog state and their results.
 
 ## Sample Usage
 
 ```tsx
-const MyApp = () => {
+import { DailogProvider } from '@essers/frontend-ui-react'
+const Root = () => {
   return (
     <DailogProvider>
       <App />
@@ -43,6 +44,8 @@ const ConfirmationDialog = ({ onApply, onCancel }: MyDialogProps) => {
     </DialogContent>
   );
 };
+
+import { useDialog } from '@essers/frontend-ui-react'
 
 const MyPage = () => {
   const { openDialog } = useDialog();
