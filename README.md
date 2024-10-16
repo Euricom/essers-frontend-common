@@ -29,6 +29,9 @@ Features
 - [x] Popover component
 - [x] Fix tailwind import, missing d.ts file
 - [x] ConfirmDialog component
+
+- [x] Add Alert component
+
 - [ ] Calendar component
 - [ ] Fix calendar styling
 - [ ] Date picker component
