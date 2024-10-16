@@ -27,6 +27,7 @@ module.exports = plugin(pluginFn, {
       // specify which colors you want to add
       gray: colors.gray,
       blue: colors.blue,
+      red: colors.red,
       // or add all tailwind colors
       // ...colors,
       ...essersColors,

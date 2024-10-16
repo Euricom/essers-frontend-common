@@ -7,7 +7,7 @@ const config: StorybookConfig = {
   stories: [
     '../*.mdx',
     '../packages/frontend-tailwind/**/*.mdx',
-    '../packages/frontend-ui-react/**/*.mdx',
+    '../packages/frontend-ui-react/src/**/*.mdx',
     '../packages/frontend-ui-react/src/**/*.stories.tsx',
   ],
   staticDirs: ['./public'],

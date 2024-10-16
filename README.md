@@ -35,6 +35,7 @@ Features
 - [ ] Fix Button styling (alignment with icons)
 - [ ] Fix dialog animation in Remix
 - [ ] Add debounce to input search
+- [ ] Fix Calendar border (is full with now and should not be)
 
 - [] Components
   - [ ] Checkbox

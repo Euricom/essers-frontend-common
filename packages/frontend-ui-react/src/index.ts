@@ -9,6 +9,7 @@ export * from './components/input';
 export * from './components/clientOnly';
 export * from './components/popover';
 export * from './components/calendar';
+export * from './components/alert';
 
 // hooks
 export * from './utils/use-hydrated';

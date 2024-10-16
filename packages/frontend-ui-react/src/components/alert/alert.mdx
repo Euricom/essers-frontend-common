@@ -1,0 +1,23 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs';
+import * as stories from './alert.stories';
+
+<Meta of={stories} />
+
+# Button
+
+```jsx
+import { Alert } from '@essers/frontend-ui';
+
+export MyComponent = () => (
+  <Alert title="Heads up!">There might be a problem</Alert>
+  <Alert title="Error" variant="destructive">We have a problem</Alert>
+);
+```
+
+## Usage
+
+<Canvas of={stories.Usage} />
+
+## Parts
+
+<Canvas of={stories.Parts} />
