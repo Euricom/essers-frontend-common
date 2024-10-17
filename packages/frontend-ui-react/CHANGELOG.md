@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.4.0
+
+### Minor Changes
+
+- a28cd65: Add Alert component
+
 ## 1.3.0
 
 ### Minor Changes
