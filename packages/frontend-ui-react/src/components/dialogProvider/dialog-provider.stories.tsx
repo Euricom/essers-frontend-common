@@ -6,7 +6,7 @@ import DialogProvider, { useDialog } from './dialog-provider';
 import type { DialogContentProps } from './types';
 
 const meta: Meta<typeof DialogProvider> = {
-  title: 'components/DialogProvider',
+  title: 'hooks/useDialog',
   component: DialogProvider,
 };
 
@@ -44,7 +44,7 @@ export const Usage = () => {
     const { openDialog } = useDialog();
 
     const handleDialogOpen = async () => {
-      const result = await openDialog(TestDialog).waitForClose();
+      const result = await openDialog(TestDialog);
       action('result')(result);
     };
     return (

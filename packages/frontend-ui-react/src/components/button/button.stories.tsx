@@ -106,10 +106,10 @@ export const Sizes = () => (
   </div>
 );
 
-export const Block = () => (
+export const FullWidth = () => (
   <div className="space-y-3">
     <Button>Default</Button>
-    <Button block>Block</Button>
+    <Button fullWidth>Full Width</Button>
   </div>
 );
 
@@ -117,17 +117,5 @@ export const Loading = () => (
   <div className="space-x-3">
     <Button>Not Loading</Button>
     <Button loading>Loading</Button>
-  </div>
-);
-
-export const CustomChild = () => (
-  <div>
-    <p>The element is rendered as `a` tag</p>
-    <Button asChild className="m-2">
-      {/* biome-ignore lint/a11y/useValidAnchor: <demo> */}
-      <a href="#" className="underline">
-        <span>Click me</span>
-      </a>
-    </Button>
   </div>
 );

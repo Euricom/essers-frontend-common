@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.2.1
+
+### Patch Changes
+
+- 09c2e5a: fix tailwind import, missing .d.ts file
+
 ## 1.2.0
 
 ### Minor Changes

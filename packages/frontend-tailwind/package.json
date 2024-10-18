@@ -1,6 +1,6 @@
 {
   "name": "@essers/frontend-tailwind",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "./index.js",
   "scripts": {
     "build": "copyfiles * ./src/*.js dist -e scripts -e scripts -e tailwind.config.js -f",

@@ -28,5 +28,13 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
-  "tailwindCSS.classAttributes": ["class", "className", "ngClass", "class:list", "classes"]
+  "tailwindCSS.classAttributes": ["class", "className", "class:list", ".*Styles"],
+  "tailwindCSS.experimental.classRegex": [
+    ["\\S*[Cc]lass[nN]ame\\S* = \\[([\\s\\S]+?)(?=][\\n;.])", "'([^']*)'"],
+    ["\\S*[Cc]lass[nN]ame\\S* = {([\\s\\S]+?)}\\s", "'([^']*)'"],
+    "\\S*[Cc]lass[nN]ame\\S* ?[:=] ['`](.*)['`]",
+    "return '(.*)'",
+    ["return \\(?{([\\s\\S]+?)}\\(?\\s", "'([^']*)'"],
+    ["cn\\(([\\s\\S]+?)\\)\\s", "'([^']*)'"]
+  ]
 }

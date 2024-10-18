@@ -18,6 +18,7 @@ Features
 - [x] Button component
 - [x] Added contributing.md file
 
+- [x] Added design-tokens info
 - [x] Improve Button component ArgTable
 - [x] Dialog component
 - [x] Paginator component with localization
@@ -26,11 +27,18 @@ Features
 - [x] Label component
 - [x] Include font family in tailwind config
 - [x] Popover component
+- [x] Fix tailwind import, missing d.ts file
+- [x] ConfirmDialog component
+
+- [x] Add Alert component
+
 - [ ] Calendar component
 - [ ] Fix calendar styling
 - [ ] Date picker component
 - [ ] Fix Button styling (alignment with icons)
 - [ ] Fix dialog animation in Remix
+- [ ] Add debounce to input search
+- [ ] Fix Calendar border (is full with now and should not be)
 
 - [] Components
   - [ ] Checkbox

@@ -1,0 +1,34 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs';
+import * as Stories from './confirm-dialog.stories';
+
+<Meta of={Stories} />
+
+# Confirm Dialog
+
+```jsx
+import { useConfirmDialog, DailogProvider } from '@essers/frontend-ui';
+
+import { DailogProvider } from '@essers/frontend-ui-react'
+const Root = () => {
+  return (
+    <DailogProvider>
+      <App />
+    </DailogProvider>
+  );
+};
+
+export App = () => (
+  const { openConfirmDialog } = useConfirmDialog();
+
+  const handleClick = () => {
+    const { t } = useTranslation();
+    const isConfirmed = await openConfirmDialog({
+      title: t('Confirmation'),
+      content: t('Are you sure to delete the product?'),
+    });
+
+    console.log(isConfirmed)
+  }
+);
+```
+
