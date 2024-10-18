@@ -1,0 +1,26 @@
+{
+  "include": ["src/**/*.tsx", "src/**/*.ts", "src/**/*.d.ts", "../tests/**.ts"],
+  "exclude": ["dist", "node_modules"],
+  "compilerOptions": {
+    "module": "esnext",
+    "types": ["@testing-library/jest-dom"],
+    "lib": ["dom", "esnext", "dom.iterable"],
+    "importHelpers": true,
+    "declaration": true,
+    "sourceMap": true,
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "noEmit": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}

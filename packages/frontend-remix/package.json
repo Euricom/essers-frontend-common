@@ -1,0 +1,57 @@
+{
+  "name": "@essers/frontend-remix",
+  "version": "1.0.0",
+  "description": "This package contains the shared Remix utilities",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json && npm run build:files",
+    "build:files": "copyfiles ./src/**/*.* dist -a && copyfiles * dist",
+    "lint:types": "tsc --noEmit",
+    "test": "vitest",
+    "test:ci": "vitest --run",
+    "test-coverage": "vitest --coverage",
+    "cleanup": "rimraf dist .turbo"
+  },
+  "keywords": [
+    "react",
+    "remix",
+    "essers"
+  ],
+  "author": "Essers - Remix Utils",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1",
+    "@types/debug": "^4.1.12",
+    "@types/react": "^18.2.21",
+    "@vitejs/plugin-react": "^4.1.0",
+    "happy-dom": "^12.2.1",
+    "node-stdlib-browser": "^1.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.9",
+    "vite-plugin-dts": "^3.6.0",
+    "vite-plugin-node-polyfills": "^0.22.0",
+    "vite-tsconfig-paths": "^4.2.1",
+    "vitest": "^0.34.6"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "dependencies": {
+    "@keyv/redis": "^3.0.1",
+    "@keyv/sqlite": "^4.0.1",
+    "@remix-run/node": "^2.13.1",
+    "debug": "^4.3.7",
+    "keyv": "^5.1.0"
+  },
+  "publishConfig": {
+    "registry": "https://nexusrepo.essers.com/repository/essers-local-npm",
+    "directory": "dist",
+    "linkDirectory": false
+  },
+  "sideEffects": false
+}
